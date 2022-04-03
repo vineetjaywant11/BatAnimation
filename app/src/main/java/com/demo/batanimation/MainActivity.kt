@@ -142,7 +142,7 @@ fun BatAnimation() {
                     center = Offset(x = 250f, y = 410f)
                 )
 
-                //cover-1 black
+                //cover-1 white
                 drawCircle(
                     brush = SolidColor(Color.White),
                     radius = 350f,
