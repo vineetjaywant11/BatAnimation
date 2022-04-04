@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -49,7 +50,8 @@ fun BatAnimation() {
     }
 
     val rotate by animateFloatAsState(
-        targetValue = if (rotatedState) 90f else 0f
+        targetValue = if (rotatedState) 90f else 0f,
+         animationSpec = tween(durationMillis = 600)
     )
 
     var colorBody by remember {
